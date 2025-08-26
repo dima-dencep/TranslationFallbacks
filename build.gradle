@@ -66,6 +66,14 @@ allprojects {
 
     publishing {
         repositories {
+            maven {
+                name = "RedlanceMinecraft"
+                url = "https://repo.redlance.org/public"
+                credentials {
+                    username = "dima_dencep"
+                    password = System.getenv("MAVEN_PASSWORD")
+                }
+            }
         }
     }
 }
