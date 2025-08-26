@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "mixins",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "ClientPackSourceAccessor",
+    "TranslationFallbacksModMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

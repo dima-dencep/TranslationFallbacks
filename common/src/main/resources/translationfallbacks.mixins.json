@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "org.redlance.dima_dencep.mods.translationfallbacks.mixins",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "TranslatableContentsMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

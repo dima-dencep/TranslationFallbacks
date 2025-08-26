@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "id": "translationfallbackstests",
+  "version": "1.0.0",
+  "name": "Translation Fallbacks",
+  "authors": [
+    "dima_dencep"
+  ],
+  "license": "OSL-3.0",
+  "environment": "client",
+  "mixins": [
+    "tests.mixins.json"
+  ]
+}

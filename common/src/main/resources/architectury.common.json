@@ -1,0 +1,7 @@
+{
+  "injected_interfaces": {
+    "net/minecraft/class_2588": [
+      "org/redlance/dima_dencep/mods/translationfallbacks/ducks/FallbacksHolder"
+    ]
+  }
+}
