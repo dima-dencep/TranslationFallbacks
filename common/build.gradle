@@ -5,7 +5,3 @@ architectury {
 dependencies {
     modImplementation "net.fabricmc:fabric-loader:${loader_version}"
 }
-
-jar {
-    from rootProject.file("LICENSE")
-}

@@ -6,7 +6,7 @@ Define translation keys with a default fallback and optional language-specific f
 
 ```json
 {
-  "key": "translation.key",
+  "translate": "translation.key",
   "fallback": "default", // vanilla behavior (fallback for all)
   "fallbacks": { // Separated into its own field to avoid breaking compatibility with vanilla
     "ru_ru": "дефолт" // fallback for ru_ru
