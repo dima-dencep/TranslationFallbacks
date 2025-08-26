@@ -9,6 +9,7 @@ pluginManagement {
 
 rootProject.name = "TranslationFallbacks"
 
+include("adventure")
 include("common")
 include("fabric")
 include("forge")

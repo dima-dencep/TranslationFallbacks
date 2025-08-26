@@ -1,0 +1,21 @@
+dependencies {
+    implementation "net.kyori:adventure-text-serializer-gson:4.24.0"
+    implementation "org.ow2.asm:asm-tree:9.8"
+
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.13.4")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.13.4")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher:1.13.4")
+}
+
+test {
+    useJUnitPlatform()
+}
+
+publishing {
+    publications {
+        mavenFabric(MavenPublication) {
+            artifactId = "TranslationFallbacksAdventure"
+            from components.java
+        }
+    }
+}
