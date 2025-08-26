@@ -3,7 +3,7 @@
   "id": "translationfallbacks",
   "version": "${version}",
   "name": "Translation Fallbacks",
-  "description": "",
+  "description": "Allows translations to have multiple fallbacks",
   "authors": [
     "dima_dencep"
   ],
@@ -25,6 +25,8 @@
   },
   "custom": {
     "modmenu": {
+      "badges": ["library"],
+      "parent": "emotecraft",
       "links": {
         "modmenu.discord": "https://discord.gg/jdB5JYX7W7",
         "modmenu.github_releases": "https://github.com/dima-dencep/translationfallbacks/releases"

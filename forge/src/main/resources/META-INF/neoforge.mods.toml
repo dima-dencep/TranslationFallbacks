@@ -10,7 +10,7 @@ version = "${version}"
 displayURL = "https://github.com/dima-dencep/translationfallbacks"
 displayName = "Translation Fallbacks"
 authors = "dima_dencep"
-description = "
+description = "Allows translations to have multiple fallbacks"
 
 [[mixins]]
 config = "translationfallbacks.mixins.json"
