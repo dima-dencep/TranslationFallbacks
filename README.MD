@@ -16,4 +16,5 @@ Define translation keys with a default fallback and optional language-specific f
 For detailed examples and test cases, refer to the [unit tests](https://github.com/dima-dencep/TranslationFallbacks/blob/main/fabric/src/test/java/tests/FallbacksTest.java).
 
 ## Adventure
-TODO
+This library also supports Adventure! To use it, apply the patcher from the [Adventure subproject](https://github.com/dima-dencep/TranslationFallbacks/tree/main/adventure)!
+But keep in mind that Adventure does nothing with fallbacks, so you'll have to implement that yourself.
