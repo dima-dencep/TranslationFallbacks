@@ -8,22 +8,20 @@ architectury {
 }
 
 configurations {
-    common
     shadowCommon
-    compileClasspath.extendsFrom common
-    runtimeClasspath.extendsFrom common
-    developmentFabric.extendsFrom common
+    compileClasspath.extendsFrom shadowCommon
+    runtimeClasspath.extendsFrom shadowCommon
+    developmentFabric.extendsFrom shadowCommon
 
     // Tests
-    testCompileClasspath.extendsFrom common
-    testRuntimeClasspath.extendsFrom common
+    testCompileClasspath.extendsFrom shadowCommon
+    testRuntimeClasspath.extendsFrom shadowCommon
 }
 
 dependencies {
     modImplementation "net.fabricmc:fabric-loader:${loader_version}"
 
-    common(project(path: ":common", configuration: "namedElements")) { transitive = false }
-    shadowCommon(project(path: ":common", configuration: "transformProductionFabric")) { transitive = false }
+    shadowCommon(project(path: ":common", configuration: "namedElements")) { transitive = false }
 
     testImplementation "net.fabricmc:fabric-loader-junit:${project.loader_version}"
 }
@@ -56,10 +54,8 @@ sourcesJar {
     from commonSources.archiveFile.map { zipTree(it) }
 }
 
-components.java {
-    withVariantsFromConfiguration(project.configurations.shadowRuntimeElements) {
-        skip()
-    }
+shadow {
+    addShadowVariantIntoJavaComponent = false
 }
 
 publishing {
