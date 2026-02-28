@@ -1,3 +1,8 @@
-dependencies {
-    modImplementation "net.fabricmc:fabric-loader:${loader_version}"
+unimined.minecraft {
+    fabric {
+        loader rootProject.fabric_version
+        accessWidener file("src/main/resources/translationfallbacks.classtweaker")
+    }
+
+    defaultRemapJar = false
 }

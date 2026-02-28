@@ -1,26 +1,12 @@
 plugins {
-    id "com.gradleup.shadow" version "9.3.2" apply false
-    id "architectury-plugin" version "3.4-SNAPSHOT"
-    id "dev.architectury.loom" version "1.13-SNAPSHOT" apply false
-}
-
-architectury {
-    minecraft = rootProject.minecraft_version
+    id "xyz.wagyourtail.unimined" version "1.4.2+redlance.2" apply false
 }
 
 subprojects {
-    apply plugin: "dev.architectury.loom"
+    apply plugin: "xyz.wagyourtail.unimined"
 
-    loom {
-        silentMojangMappingsLicense()
-    }
-
-    dependencies {
-        minecraft "com.mojang:minecraft:${rootProject.minecraft_version}"
-        mappings loom.layered() {
-            officialMojangMappings()
-            parchment("org.parchmentmc.data:parchment-${rootProject.minecraft_version}:${rootProject.parchment_version}@zip")
-        }
+    unimined.minecraft(sourceSets.main, true) {
+        version rootProject.minecraft_version
     }
 
     processResources {
@@ -34,11 +20,11 @@ subprojects {
 
 allprojects {
     apply plugin: "java"
-    apply plugin: "architectury-plugin"
+    apply plugin: "java-library"
     apply plugin: "maven-publish"
 
     base.archivesName = rootProject.archives_base_name
-    version = "${rootProject.mod_version}+mc${rootProject.minecraft_version}"
+    version = "${rootProject.mod_version}+mc.${rootProject.minecraft_version}"
     group = rootProject.maven_group
 
     repositories {
@@ -50,14 +36,18 @@ allprojects {
             }
         }
         maven {
-            name = "ParchmentMC"
-            url = "https://maven.parchmentmc.org"
+            name = "Maven for PR #2975" // https://github.com/neoforged/NeoForge/pull/2975
+            url = uri("https://prmaven.neoforged.net/NeoForge/pr2975")
+            content {
+                includeModule("net.neoforged", "neoforge")
+                includeModule("net.neoforged", "testframework")
+            }
         }
     }
 
     tasks.withType(JavaCompile).configureEach {
         options.encoding = "UTF-8"
-        options.release.set 21
+        options.release.set 25
     }
 
     java {
