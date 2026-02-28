@@ -19,10 +19,6 @@
   "mixins": [
     "translationfallbacks.mixins.json"
   ],
-  "depends": {},
-  "conflicts": {
-    "dynamicfps": "*"
-  },
   "custom": {
     "modmenu": {
       "badges": ["library"],
