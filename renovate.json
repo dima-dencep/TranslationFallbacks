@@ -1,0 +1,15 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended"
+  ],
+  "packageRules": [
+    {
+      "matchPackageNames": ["net.fabricmc:*"],
+      "registryUrls": [
+        "https://repo.maven.apache.org/maven2",
+        "https://maven.fabricmc.net/"
+      ]
+    }
+  ]
+}
