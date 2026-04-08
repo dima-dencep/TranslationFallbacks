@@ -1,5 +1,5 @@
 plugins {
-    id "xyz.wagyourtail.unimined" version "1.4.2+redlance.2" apply false
+    id "xyz.wagyourtail.unimined" version "1.4.2+redlance.3" apply false
 }
 
 subprojects {
